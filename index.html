@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11, IE=edge"/>
+    <title>Parallel Hierarchies</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div style="width:10%;display: inline-block;vertical-align: top">
+        <img src="logo.png" style="width:100%"/>
+      </div>
+      <div style="width: 80%;display: inline-block;padding-left: 30px;vertical-align: top">
+        <h1>Parallel Hierarchies</h1>
+        <p>An interactive information visualization for hierarchies in multi-dimensional data</p>
+        <p><a class="button" href="./demo/index.html">live demo</a></p>
+      </div>
+    </header>
+    <article>
+      <section>
+        <h1>Features</h1>
+        <h2>Concepts from Parallel Sets</h2>
+        <ul>
+          <li>Distribution of values per dimension and co-occurence of values between dimensions</li>
+          <li>horizontal reordering of dimensions</li>
+          <li>vertical reordering of categories per dimension</li>
+          <li>adding/removing dimensions to/from the view</li>
+          <li>sorting categories per dimension by value or description</li>
+        </ul>
+
+        <h2>Concepts from Icicle Plots</h2>
+        <ul>
+          <li>exploration of hierarchical dimensions</li>
+          <li>drill-down to lower hierarchy levels per dimension while maintaining context for related categories on higher levels.</li>
+        </ul>
+
+        <h2>Additional features</h2>
+        <ul>
+          <li>co-occurence of values in hierarchical dimensions</li>
+          <li>minimization of intersections between flows by reordering catgories, either using a greedy approach or the barycentric method for partitioned graphs</li>
+          <li>seperate view for items filtered per dimension as well as globally</li>
+          <li>fisheye lense to increase readability of small categories</li>
+        </ul>
+
+        <h1>Tutorial</h1>
+        <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/279480161?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </section>
+
+      <section>
+        <h1>Try it yourself!</h1>
+        <h2>Stable Release</h2>
+        <p>Includes all features as proposed in our paper and as listed above.</p>
+        <p><a class="button" href="./demo/index.html">live demo</a></p>
+
+        <h2 style="margin-top: 35px">Experimental Features</h2>
+        <p>Expanding the functionality of <i>Parallel Hierarchies</i> with new features like multiple hierarchy selection per dimenion, an accordion mode to change width of categories and more animations between interactions.</p>
+        <p><strong>Note: </strong>Does not allow minimization of ribbon intersections (yet).</p>
+
+        <p><a class="button experimental" href="./demo/experimental.html">Experimental</a></p>
+      </section>
+    </article>
+
+    <footer>
+      <ul>
+        <li><a href="https://github.com/ParallelHierarchies/ParallelHierarchies"><img alt="github logo" class="icon" src="./github-mark.png" />Source Code available on GitHub</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
