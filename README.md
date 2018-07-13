@@ -1,2 +1,2 @@
 # Website for Parallel Hierarchies
-Visit [Parallel Hierarchies](parallelhierarchies.github.io) project page.
+Visit [Parallel Hierarchies](https://parallelhierarchies.github.io) project page.
