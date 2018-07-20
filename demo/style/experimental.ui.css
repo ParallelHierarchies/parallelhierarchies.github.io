@@ -137,7 +137,7 @@ nav#uiControls #rulers > .ruler > div.delete::before {
 #datasetModal > div.modalBody {
   width: 400px;
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 75px;
   padding: 20px;
   background: #fff;
   border-radius: 2px;
@@ -190,7 +190,6 @@ nav#uiControls #rulers > .ruler > div.delete::before {
 }
 #ownDataset h3 {
   font-size: 16px;
-  margin: 5px 0;
   color: steelblue;
 }
 #ownDataset p {
@@ -350,4 +349,3 @@ footer ul > li {
 footer a {
   color: #333;
 }
-
