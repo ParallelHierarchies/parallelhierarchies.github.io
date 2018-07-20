@@ -53,10 +53,15 @@
         <div id="ownDataset" class="hidden">
           <h3>Custom Dataset (CSV)</h3>
           <input id="userItems" type="file" accept=".csv" />
-          <p class="data_info">Your data will be handled locally by your browser only and will <strong>not</strong> be uploaded to external services.</p>
+          <p>Make sure your values are actually <strong style="color:orangered">comma-seperated</strong> (Excel exports to CSV are semicolon-seperated by default).</p>
+          <p>Your data will be handled locally by your browser only and will <strong>not</strong> be uploaded to external services.</p>
+
+          <h3>Aggregate Dimension</h3>
+          <input type="text" id="userAggregateValue" placeholder="value"/>
+          <p>Name of the aggregate dimension that assigns a quantitative value to each row in your data.</p>
           <h3>Hierarchies in the Data</h3>
           <p><strong>label:</strong> displayed name of the hierarchical dimension</p>
-          <p><strong>levels:</strong> a comma-seperated list of column headers in your CSV file. The position of each term in this list defines its level in the hierarchy.</p>
+          <p><strong>levels:</strong> a comma-seperated list of dimensions from your data. The position of each term in this list defines its level in the hierarchy.</p>
           <ul id="userHierarchies"></ul>
           <div id="addHierarchyGroup">
             <input type="text" id="userHierarchyLabel" style="width: 40%" placeholder="Label"/>
