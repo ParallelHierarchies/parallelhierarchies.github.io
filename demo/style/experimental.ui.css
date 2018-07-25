@@ -297,6 +297,53 @@ nav#uiControls #rulers > .ruler > div.delete::before {
   text-align: right;
 }
 
+#notifications {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left:
+}
+#notifications .box {
+  border-radius: 2rem;
+  padding: 0.4em 0 0.6em;
+  background: #fff;
+  border: 1px solid;
+  text-align: center;
+  font-weight: normal;
+  justify-content: space-between;
+}
+#notifications .box.error {
+  border-color: firebrick;
+}
+#notifications .box.warning {
+  border-color: orange;
+}
+#notifications .box.hint {
+  border-color: steelblue;
+}
+#notifications .box span {
+  margin: 0 1em;
+}
+#notifications .box.error span {
+  color: firebrick;
+}
+#notifications .box.warning span {
+  color: orange;
+}
+#notifications .box.hint span {
+  color: steelblue;
+}
+#notifications .icon::before {
+  font-weight: bold;
+  content: 'info: ';
+}
+#notifications .box span.delete::before {
+  content: '✖';
+  cursor: pointer;
+}
+
 #timestamps > .timestamp {
   width: 100%;
   padding-bottom: 2.5rem;
