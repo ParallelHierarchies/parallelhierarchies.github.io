@@ -69,6 +69,10 @@ g.dimension g.node > text {
 g.category {
 
 }
+g.category .box > rect {
+  stroke: #fff;
+  stroke-width: 1px;
+}
 g.category .box > rect.max {
   fill: #aaa;
 }
