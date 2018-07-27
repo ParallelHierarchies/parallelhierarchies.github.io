@@ -35,19 +35,23 @@ section {
 section h1 {
   font-weight: lighter;
   font-size: 20px;
+  text-transform: uppercase;
   color: #2196F3;
 }
 section h2 {
-  font-weight: lighter;
-  font-size: 16px;
-  color: #2196F3;
+  margin-top: 30px;
+  font-size: 18px;
+}
+section img {
+  max-width: 100%;
+  margin: 25px 0;
 }
 
 footer {
   color: #000;
   opacity: 0.73;
 }
-footer li {
+footer ul li {
   display: inline-block;
   list-style: none;
 }
@@ -63,8 +67,14 @@ footer a:hover {
 ul {
   padding-left: 20px;
 }
-li {
+ul li {
   list-style: square;
+}
+li {
+  margin-bottom: 2px;
+}
+li a {
+  color: #333;
 }
 
 a.button {

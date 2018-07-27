@@ -44,16 +44,16 @@
           <li>seperate view for items filtered per dimension as well as globally</li>
           <li>fisheye lense to increase readability of small categories</li>
         </ul>
-
-        <h1>Tutorial</h1>
-        <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
-          <iframe src="https://player.vimeo.com/video/279480161?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-        <script src="https://player.vimeo.com/api/player.js"></script>
       </section>
 
       <section>
         <h1>Try it yourself!</h1>
+        <h2>Quick Introduction</h2>
+        <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/279480161?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
         <h2>Stable Release</h2>
         <p>Includes all features as proposed in our paper and as listed above.</p>
         <p><a class="button" href="./demo/index.html">live demo</a></p>
@@ -63,6 +63,231 @@
         <p><strong>Note: </strong>Does not allow minimization of ribbon intersections (yet).</p>
 
         <p><a class="button experimental" href="./demo/experimental.html">Experimental</a></p>
+      </section>
+
+      <section>
+        <h1>Tutorial</h1>
+        <h2>Getting Started</h2>
+        <p>To follow this tutorial, you can either use <a href="./demo/index.html">the live demo</a>, or use a local version cloned from <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">our GitHub repository</a>.</p>
+        <p>When launching the visualization, you will be presented with a list of datsasets to choose from. To follow this tutorial, click-on "Yeast Gene Ontology".</p>
+        <img width=400 alt="screenshot of the dataset picker. You can see a list of three options: 'Yeast Gene Ontology', '1990 Census (sample of 10k)' and '199 Census (sample of 100k)'" src="./img/choose_dataset.PNG"/>
+
+        <p>After selecting the dataset, the view will be generated from the data. A toolbar is positioned on top and the actual visualization below. You can interact with both the toolbar and the visualization, but we will come to that later on.</p>
+
+        <h2>The View Components</h2>
+        <p>Below you can see a screenshot from the visualization after selecting the Yeast Gene Ontology dataset. Let's have a look at the components of the visualization and how they are called:</p>
+        <img alt="screenshot of the Parallel Hierarchies visualization. Bezier paths of various widths connect two disjoint groups of rectangles that are stacked on top of each other, each on one side of the screen. Above some widgets." src="./img/overview.PNG" />
+
+        <ol type="a">
+          <li>title of the dataset</li>
+          <li>dropdown menu to add new dimensions</li>
+          <li>add a horizontal guideline for vertical height analysis</li>
+          <li><a href="#cursor_interaction">switch cursor interaction</a></li>
+          <li><a href="#ribbon_minimization">toggle ribbon minimization with the barycentric method</a></li>
+          <li><a href="#ribbon_minimization">toggle a greedy optimization of the result of the barycentric method</a></li>
+          <li>pick a dataset</li>
+          <li>reset the visualization to default values</li>
+          <li><a href="#column_chart">Column chart</a></li>
+          <li><a href="#dimension">a dimension</a></li>
+          <li><a href="#category">category of a dimension</a></li>
+          <li><a href="#ribbon">ribbon between categories of two neighboring dimensions</a></li>
+        </ol>
+
+        <h2>Adding/Removing Dimensions</h2>
+        <p>
+          You can now investigate the dataset.
+          The first thing you might want to do is adding a new dimension to the visualization.
+          To do so, click on the dropdown menu on the top of the screen that says "add dimension..." and select "Molecular Function".
+          An instance of the "Locus" dimension will now appear on the right side of the visualziation.
+        </p>
+        <p>
+          You can now see the interconnections between three facets of the dataset as well as the individual values of each dimension.
+          Move your mouse over any category to get more insights.
+          Four things happen:
+          <ol>
+            <li>A tooltip appears that gives you detailed information on the highlighted category.</li>
+            <li>All categories sharing at least one of the items represented by the highlighted category will be rendered darker than others.</li>
+            <li>All ribbons that do not share any of the items will fade out.</li>
+            <li>All ribbons that do share items will indicate the percentage by a darker ribbon on top.</li>
+          </ol>
+          The same thing will happen if you move your mouse over any ribbon.
+        </p>
+        <p>
+          Now, add the dimension called "Strand". Whoops, we do not actually need that one, so let us delete it from the view.
+          To do so, click the cross next to the name "Strand" in the header of the dimension.
+        </p>
+
+        <h2>Rearranging Dimensions</h2>
+        <p>
+          We now want to exlpore how the Locus chromosomes of the Locus dimension are interconnected to both Cellular Components and Biological Processes.
+          In order to do this, we need to rearrange the dimensions and put the Locus dimension in between the other two.
+          Drag the "Locus" name to the left, until the Biological Process dimension switches its position and drop it in place.
+        </p>
+        <p>
+          You can now explore the cross-tabulation between Locus to it's neighboring dimensions.
+        </p>
+
+        <h2>Drilling down and Rolling up hierarchical categories</h2>
+        <p>
+          You may have noticed the <i>+</i> symbols on some of the categories.
+          These indicate hierarchies in the dataset.
+          This is <i>Parallel Hierarchies</i> after all, so let's find out more about those hierarchies, shall we?
+          Click on the rectangle of the "cell part" category of the "Cellular Component" dimension.
+        </p>
+        <p>
+          The visualization changes. Notice how the cell part category is now much bigger than before.
+          It's name is rendered sideways on top of the rectangle. New categories appeared to the right of that category.
+          We call this the <i>drill-down</i> operation.
+          Now, let's drill-down further into the hierarchy of the cell part category by clicking "intracellular part" and then "cytoplasmic part".
+          Notice how on each level, a new ancestor category appears slightly smaller than it's parent.
+        </p>
+        <p>
+          Notice also that we can not drill-down further into this category. We have reached a dead end.
+          In order to get back to higher levels of hierarchy, click on any of the ancestor categories to make them the working category.
+          We call this the <i>roll-up</i> operation.
+          Roll-up the cellular part hierarchy to reach the root by clicking on the "cellular part" ancestor category.
+        </p>
+        <p>
+          Let us investigate the Locus dimension a bit more.
+          Drill-down into the Locus dimension by clicking on any of the chromosome categories.
+          Look at all those genes that are now visible. That's too many to work with, so let's reduce their numbers.
+          Drill-down into "localization" > "establishment of localization" > "transport" on the Biological Process dimension on the right.
+          Notice how on every level, the number of visible Genes reduces, because categories which do not share any items active on all other dimensions have a height of 0.
+        </p>
+
+        <h2>Category Interaction</h2>
+        <p>
+          You will notice how some categories in the Locus dimension do not have a label.
+          The reason for this is that <i>Parallel Hierarchies</i> tries to keep the view as clean as possible by hiding labels of categories that are smaller than the labels themselves.
+          We could use the tooltip to have a look at each category individually, but that is tiresome.
+          Instead, let's switch our interaction mode from "Dragging" to "Fisheye" in the toolbar
+        </p>
+        <p>
+          Now, if you move your mouse closer to the gene categories, their labels will appear.
+          Also, Categories in a certain radius will be moved away to give more space to the ones in focus.
+        </p>
+
+        <br />
+
+        <p>
+          You are now familiar with the most important features of <i>Parallel Hierarchies</i>.
+          But what do the other buttons do?
+          Try it out for yourself or watch our in-depth video below:
+        </p>
+        <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/281947411?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+      </section>
+
+      <section>
+        <h1>Visual Elements</h1>
+        <h2 id="dimension">Dimension</h2>
+        <p><i>Represents a single facet of the dataset.</i></p>
+        <img src="img/dimension.PNG" width=500 alt="Screenshot of a dimension in parallel hierarchies. The dimension is named 'Biological Process' and has the following visible categories: 'metabolic proc...', 'cellular process', 'localization', 'undefined', and 'biological reug...'. The 'undefined' category is highlighted." />
+        <p>
+          The top part of a dimension consists of a header component.
+          Here you will see the name of the dimension, which has the same color as the categories further down.
+          On the right side of the name, you will see an 'X' marker, which you can click to delete the dimension from the view.
+        </p>
+        <p>
+          Placed below the name is the current ordering of the dimension. This can take one of three values:
+          "Minimized Intersections" (order according to the minimization strategy), "Value" (sorted by aggregate value) and "Description" (sorted by names of categories).
+          Click on the current ordering to select another strategy.
+        </p>
+        <p>
+          The body is each dimension consists of the categories found in the data.
+          A category is a single value that a set of items my contain for the individual dimension.
+          Each dimension is assigned a specific color to quickly seperate them from each other.
+          Both the dimension name and the categories have this particular color.
+          You can find more information on the categories below.
+        </p>
+        <p>
+          You can rearrange dimensions horizontally by dragging the name of the dimension to the left or right.
+          Dimensions switch places if you move them at least half-way closer to each other.
+        </p>
+
+        <h2 id="category">Category</h2>
+        <p><i>Represents a (hierarchical) value of a facet of the dataset.</i></p>
+        <img src="./img/category.PNG" width=500 alt="Screenshot of a category in parallel hierarchies. It is labelled 'organelle' and has ribbons going out of it.'"/>
+        <p>
+          A category is a single value that a set of items my contain for the individual dimension.
+          It is represented as a rectangle of fixed width.
+          The height of each category represents the total sum of values of items that have the specific value.
+          The bigger the height, the bigger the sum of values.
+          If a category has a certain height, a label with its name will be placed on either the left or right side of the category.
+          You can get detailed information on a category via the tooltip on mouse-over.
+        </p>
+        <p>
+          A category may be hierarchical, which means that we can drill down into its subcategories.
+          These subcategories are derived from the items in the CSV file and the hierarchies from the schema.
+          Whether or not a category is hierarchical is indicated by a small <i>+</i> Symbol the at the upper end of the category.
+          You can click a category to drill into its hierarchy
+        </p>
+        <p>
+          Hierarchies in a category are represented by a simplified icicle tree that grows to the left and right side of a dimension.
+          Only the path to the current level is shown in proportion.
+          All other categories on lower levels are only indicated as small rectangles above and below an active ancestor.
+          You can click an ancestor to roll up the hierarchy to its level.
+          You can also click on inactive ancestors to make them the working category.
+        </p>
+
+
+        <h2 id="ribbon">Ribbon</h2>
+        <p><i>Visualizes interconnections between two categories of two neighboring dimensions.</i></p>
+        <img src="./img/ribbons.PNG" alt="Screenshot of ribbons in parallel hierarchies."/>
+        <p>
+          A ribbon displays the interconnection between categories of neighboring dimensions.
+          It is represented as a horizontal bezier path.
+          The start and end of this path are the connected categories.
+          The height of this path represents the total sum of values of items that share both the source and target categories in their specific dimensions.
+          You can get detailed information on a ribbon via the tooltip on mouse-over.
+        </p>
+        <p>
+          If you mouse-over either a ribbon or a category, the set of items represented by the visual element will be highlighted.
+          All categories sharing at least one of the items in that set will get a darker color.
+          If a ribbon does not share any of the items in that set, it will be rendered more transparent.
+          For ribbons that do share at least one of the items, a second path will show the percentage of the highlighted items to the overall items of the ribbon.
+          This secondary ribbon is of darker color and aligned at the bottom of the primary ribbon, similar to stacked bar charts.
+        </p>
+
+
+        <h2 id="cursor_interaction">Cursor interaction</h2>
+        <p><i>Interaction technique for categories.</i></p>
+        <p>You can choose between two interactions modes when pointing the cursor on a category: The drag interaction, which lets you rearrange categories vertically, and the <a href="https://infovis-wiki.net/wiki/Fisheye_View">fisheye view</a> mode.</p>
+        <p>
+          If you activate the latter, you will notice that the spacing between categories increases in a certain radius, allowing more space between categories closest to the cursor.
+          Also, labels for all categories will be displayed, regardless of their size.
+          This is especially helpful when working with a large set of small categories, since labels can be read without the tooltip.
+        </p>
+
+        <h2 id="ribbon_minimization">Ribbon minimization</h2>
+        <p><i>Optional minimization of ribbon intersections to reduce clutter.</i></p>
+        <p>
+          To enable minimization, click the "Minmize intersections" option.
+          This will toggle the use of the <a href="https://ieeexplore.ieee.org/document/4308636/">barycentric method</a> to calculate a new category ordering that minimizes ribbon intersections.
+          A maximum of 10 iterations will be run.
+        </p>
+        <p>
+          To further improve the minimization result, you can also click the "Use Greedy" option.
+          The Greedy optimization will use the result of the barycentric method and an additional minimization step that reorders categories greedily.
+          Notice that this will not always yield any changes of the visualization, since the greedy approach is not guaranteed to find better orderings.
+        </p>
+        <h2 id="column_chart">Column chart</h2>
+        <p><i>Displays the amount of data filtered by the hierarchy queries on each dimension</i></p>
+        <p>
+          Drilling down a category in <i>Parallel Hierarchies</i> formulates a query on the containing dimension:
+          "Find all categories in dimension A that are children of the hierarchy a1 > a2 > ...".
+          For each individual dimension, one of these queries can be formulated.
+          The column chart visualizes the effect that each individual query has on the overall amount of data that is visisble.
+        </p>
+        <p>
+          The grey bar on the very left shows how many items of the dataset are currently visible (or filtered, depending on the mode selected in the dropdown menu above).
+          Each colored bar right to that one represents the queries per dimension.
+          The order the bars is the same as the order of dimensions in the visualization.
+        </p>
       </section>
     </article>
 
