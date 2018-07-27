@@ -73,10 +73,13 @@ ul li {
 li {
   margin-bottom: 2px;
 }
-li a {
-  color: #333;
+code li {
+  list-style: none;
 }
 
+a {
+  color: #333;
+}
 a.button {
   font-size: 15px;
   padding: 5px 10px;

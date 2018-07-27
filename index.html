@@ -16,38 +16,15 @@
       <div style="width: 80%;display: inline-block;padding-left: 30px;vertical-align: top">
         <h1>Parallel Hierarchies</h1>
         <p>A visualization for cross-tabulating hierarchical aggregates</p>
-        <p><a class="button" href="./demo/index.html">live demo</a></p>
+        <div>
+          <a class="button" href="./demo/index.html">live demo</a>
+          <a class="button" href="https://github.com/ParallelHierarchies/ParallelHierarchies">Github Project</a>
+        </div>
       </div>
     </header>
     <article>
       <section>
         <h1>Features</h1>
-        <h2>Concepts from Parallel Sets</h2>
-        <ul>
-          <li>Distribution of values per dimension and co-occurence of values between dimensions</li>
-          <li>horizontal reordering of dimensions</li>
-          <li>vertical reordering of categories per dimension</li>
-          <li>adding/removing dimensions to/from the view</li>
-          <li>sorting categories per dimension by value or description</li>
-        </ul>
-
-        <h2>Concepts from Icicle Plots</h2>
-        <ul>
-          <li>exploration of hierarchical dimensions</li>
-          <li>drill-down to lower hierarchy levels per dimension while maintaining context for related categories on higher levels.</li>
-        </ul>
-
-        <h2>Additional features</h2>
-        <ul>
-          <li>co-occurence of values in hierarchical dimensions</li>
-          <li>minimization of intersections between flows by reordering catgories, either using a greedy approach or the barycentric method for partitioned graphs</li>
-          <li>seperate view for items filtered per dimension as well as globally</li>
-          <li>fisheye lense to increase readability of small categories</li>
-        </ul>
-      </section>
-
-      <section>
-        <h1>Try it yourself!</h1>
         <h2>Quick Introduction</h2>
         <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
           <iframe src="https://player.vimeo.com/video/279480161?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -176,8 +153,70 @@
           <iframe src="https://player.vimeo.com/video/281947411?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
+      </section>
 
+      <section>
+        <h1>Use your own data</h1>
+        <h2>Import into experimental version</h2>
+        <p>
+          The quickest way to use your own data is to use the experimental version data import feature.
+          First, visit the <a href="https://parallelhierarchies.github.io/demo/experimental.html">website</a> and click the "Use your own Dataset" option.
+        </p>
+        <ol>
+          <li>
+            Click the "Choose File" button and pick the CSV file from your disk (make sure the data in your CSV file meets <a href="#datastructure_notice">the requirements</a>).
+          </li>
+          <li>
+            In the "Aggregate Dimension" field, enter the exact name of the dimension that contains numerical values, which will be aggregated and represented by ribbon and category heights.
+          </li>
+          <li>
+            <p>
+              The last step is to define the hierarchies in your data one-by-one.
+              In the "Label" field, choose any string that will be the name of the hierarchical dimension.
+              Assuming your data is structured according to the requirements, enter the exact names of the dimensions making up a hierarchy, seperating each level by a comma.
+            </p>
+            <p>For example, if your hierarchy is "country" > "state" > "region" > "city" > "street", enter "country, state, region, city, street".</p>
+          </li>
+          <li>Afterwards, click the "add" button to store the hierarchy.</li>
+          <li>When you have stored all hierarchies in the list, click the "Start" button to launch the application with your own dataset.</li>
+        </ol>
+        <img src="./img/custom_dataset.PNG" />
 
+        <h2>Using your own schema</h2>
+        <p>
+          This assumes you have a CSV file with your items and a JSON file containting you schema in accordance with <a href="#datastructure_notice">the requirements</a> and a local clone of the github project ready to go.
+        </p>
+        <ol>
+          <li>In the project directory, open src/app.js in a text editor or IDE.</li>
+          <li>In the <code>CONFIGURATIONS</code> object, create a new property of type object with any name you like. This name will be used in the dropdown list when launching the application.</li>
+          <li>
+            <p>Assign the <code>schemaURI</code> and <code>itemsURI</code> properties to it, so that your entry looks something like this:</p>
+            <p>
+              <code>
+                  'myCustomDataset': {
+                    schemaURI: './link/to/schema.json',
+                    itemsURI: './link/to/items.csv'
+                  }
+              </code>
+            </p>
+          </li>
+          <li>
+            <p>In the "index.html" file, add a new line right after line 59 that looks similar to this one: </p>
+            <p>
+              <code>
+                  &lt;li&gt;
+                    &lt;button class="preset" value="myCustomDataset"&gt;
+                      &lt;i class="material-icons"&gt;folder_open&lt;/i&gt;
+                      My Custom Dataset
+                    &lt;/button&gt;
+                  &lt;/li&gt;
+              </code>
+            </p>
+          </li>
+          <li>Launch the application and visit <a href="http://localhost:8080">localhost:8080</a>.</li>
+          <li>Choose your own dataset from the list.</li>
+        </ol>
+        <img src="./img/custom_schema.PNG" />
       </section>
 
       <section>
@@ -263,8 +302,8 @@
         </p>
 
         <h2 id="ribbon_minimization">Ribbon minimization</h2>
-        <img src="./img/minimization_configuration.PNG" alt="Screenshot of a widget giving the option between 'Optimize Intersections' and 'Use Greedy'" />
         <p><i>Optional minimization of ribbon intersections to reduce clutter.</i></p>
+        <img src="./img/minimization_configuration.PNG" alt="Screenshot of a widget giving the option between 'Optimize Intersections' and 'Use Greedy'" />
         <p>
           To enable minimization, click the "Minmize intersections" option.
           This will toggle the use of the <a href="https://ieeexplore.ieee.org/document/4308636/">barycentric method</a> to calculate a new category ordering that minimizes ribbon intersections.
@@ -277,8 +316,8 @@
         </p>
 
         <h2 id="column_chart">Column chart</h2>
+        <p><i>Displays the amount of data filtered by the hierarchy queries on each dimension.</i></p>
         <img src="./img/column_chart.PNG" alt="Screenshot of a column chart showing six bars with various heights. All bars have unique colors. Above the bars are the values '2%', '53%', '23%', '100%', '90%' and '11%''" />
-        <p><i>Displays the amount of data filtered by the hierarchy queries on each dimension</i></p>
         <p>
           Drilling down a category in <i>Parallel Hierarchies</i> formulates a query on the containing dimension:
           "Find all categories in dimension A that are children of the hierarchy a1 > a2 > ...".
@@ -290,6 +329,172 @@
           Each colored bar right to that one represents the queries per dimension.
           The order the bars is the same as the order of dimensions in the visualization.
         </p>
+      </section>
+      <section>
+        <h1 id="datastructure_notice">Data Schema</h1>
+        <h2>CSV file</h2>
+        <p>Let's assume, you want to represent the following hierarchical dimension in <i>Parallel Hierarchies</i>:</p>
+        <img src="./img/hierarchy_example.PNG"/>
+        <p>This is an easy task to do in JSON, since we can place objects inside other objects, creating a tree structure. In CSV files on the other hand, we need to flatten the hierarchy.</p>
+        <p>
+          The first thing we need to do is find the longest path in our hierarchy.
+          In our example, it's the path
+        </p>
+        <p>
+          <code>"Dimension A" > "Category A4" > "Category A4.1" > "Categry A4.1.1" or "Category A4.1.2"</code>
+        </p>
+        <p>
+          We then need to get the length of that path, excluding the root, which in our case means it is 3.
+          So for every item, instead of just storing the value for <code>Dimension A</code>, we need to store the path along the hierarchy to this category as seperate fields in the data.
+          We also need to make sure to store deeper levels as empty.
+        </p>
+
+        <h3>Example</h3>
+        <p>
+          If an item in our data looked like this:
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"dimension A": "category A4.1.2",</li>
+                  <li>"value": 100</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+          We need to convert it to the following:
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"dimensionA_Level0": "category A4",</li>
+                  <li>"dimensionA_Level1": "category A4.1",</li>
+                  <li>"dimensionA_Level2": "category A4.1.2",</li>
+                  <li>"value": 100</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+        </p>
+        <p>
+          Respectively, the item
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"dimension A": "category A1.2",</li>
+                  <li>"value": 40</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+          has to be converted into
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"dimensionA_Level0": "category A1",</li>
+                  <li>"dimensionA_Level1": "category A1.2",</li>
+                  <li>"dimensionA_Level2": "",</li>
+                  <li>"value": 40</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+        </p>
+        <p>
+          Therefore, our CSV file containing those two items in the end would look like this:
+          <code>
+            <ul>
+              <li>dimensionA_Level0,dimensionA_Level1,dimensionA_Level2,value</li>
+              <li>category A4,category A4.1,category A4.1.2,100</li>
+              <li>category A1,category A1.2,,40</li>
+            </ul>
+          </code>
+        </p>
+
+        <h2>JSON file</h2>
+        <p>
+          In addition to that we need to tell <i>Parallel Hierarchies</i> how the levels of our hierarchical dimensions are named, as well as some other metadata.
+          We do this in a seperate JSON file with the following structure:
+
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"title": {string}, // name of our dataset </li>
+                  <li>"unit": {string}, // name of the unit our data ($, km, kg, people,...) </li>
+                  <li>"timestamps": {Array of strings}, // list of dimensions with quantitative data</li>
+                  <li><br/></li>
+                  <li>
+                    "hierarchies": [
+                  </li>
+                  <li>
+                    <ul>
+                      <li>{ // one object per hierarchy</li>
+                      <li>
+                        <ul>
+                          <li>"label": {string}, // name for our hierarchical data</li>
+                          <li>"levels": {Array of strings} // ordered list of dimension levels</li>
+                        </ul>
+                      </li>
+                      <li>}</li>
+                    </ul>
+                  </li>
+                  <li>]</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+        </p>
+
+        <h3>Example</h3>
+        <p>
+          Following our example from the CSV file above, we would need to create a file looking like this:
+
+          <code>
+            <ul>
+              <li>{</li>
+              <li>
+                <ul>
+                  <li>"title": "Example Dataset", </li>
+                  <li>"unit": "meters", </li>
+                  <li>"timestamps": ["value"],</li>
+                  <li><br/></li>
+                  <li>
+                    "hierarchies": [
+                  </li>
+                  <li>
+                    <ul>
+                      <li>{</li>
+                      <li>
+                        <ul>
+                          <li>"label": "Hierarchy A",</li>
+                          <li>"levels": ["dimensionA_Level0", "dimensionA_Level1", "dimensionA_Level2"]</li>
+                        </ul>
+                      </li>
+                      <li>}</li>
+                    </ul>
+                  </li>
+                  <li>]</li>
+                </ul>
+              </li>
+              <li>}</li>
+            </ul>
+          </code>
+        </p>
+
+        <p>Both the CSV and the JSON file are then passed to an instace of <code>ParallelHierarchies</code> (example in the <code>src/app.js</code>)</p>
       </section>
     </article>
 

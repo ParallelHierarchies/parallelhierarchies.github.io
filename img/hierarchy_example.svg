@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="hierarchy_example.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="751.15994"
+     inkscape:cy="676.14782"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:connector-spacing="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715"
+       cx="202.37271"
+       cy="46.213757"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="170.13132"
+       y="35.427319"
+       id="text3719"><tspan
+         sodipodi:role="line"
+         id="tspan3717"
+         x="170.13132"
+         y="35.427319"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Dimension A</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0"
+       cx="13.854486"
+       cy="100.83036"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="27.583452"
+       y="104.47648"
+       id="text3719-1"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3"
+         x="27.583452"
+         y="104.47648"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A1</tspan></text>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-8"
+       cx="133.48395"
+       cy="101.20834"
+       r="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="107.65703"
+       y="118.75248"
+       id="text3719-1-0"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-7"
+         x="107.65703"
+         y="118.75248"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A2</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6"
+       cx="242.71907"
+       cy="101.20833"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="216.89217"
+       y="118.75246"
+       id="text3719-1-7"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-5"
+         x="216.89217"
+         y="118.75246"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A3</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927678;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6-2"
+       cx="359.75085"
+       cy="100.83035"
+       rx="3.1254513"
+       ry="3.1254511" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="373.47983"
+       y="104.47647"
+       id="text3719-1-7-3"><tspan
+         sodipodi:role="line"
+         x="373.47983"
+         y="104.47647"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan3817">Category A4</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-0"
+       cx="-56.424953"
+       cy="154.11024"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-82.251869"
+       y="171.65437"
+       id="text3719-1-5"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-78"
+         x="-82.251869"
+         y="171.65437"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A1.1</tspan></text>
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-8-3"
+       cx="69.886246"
+       cy="154.48824"
+       r="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="44.05933"
+       y="172.03236"
+       id="text3719-1-0-3"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-7-9"
+         x="44.05933"
+         y="172.03236"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A1.2</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6-21"
+       cx="278.8129"
+       cy="154.48822"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="292.5419"
+       y="158.13434"
+       id="text3719-1-7-1"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-5-4"
+         x="292.5419"
+         y="158.13434"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A4.1</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6-2-5"
+       cx="427.64978"
+       cy="154.11024"
+       rx="3.1254513"
+       ry="3.1254511" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="441.37875"
+       y="157.75636"
+       id="text3719-1-7-3-1"><tspan
+         sodipodi:role="line"
+         x="441.37875"
+         y="157.75636"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan3817-2">Category A4.2</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6-21-2"
+       cx="194.84933"
+       cy="213.28752"
+       rx="3.1254511"
+       ry="3.1254513" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="169.02245"
+       y="230.83165"
+       id="text3719-1-7-1-7"><tspan
+         sodipodi:role="line"
+         id="tspan3717-3-5-4-9"
+         x="169.02245"
+         y="230.83165"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway,  weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Category A4.1.1</tspan></text>
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53927684;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3715-0-6-2-5-7"
+       cx="347.96252"
+       cy="212.90955"
+       rx="3.1254513"
+       ry="3.1254511" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="322.13562"
+       y="230.45367"
+       id="text3719-1-7-3-1-7"><tspan
+         sodipodi:role="line"
+         x="322.13562"
+         y="230.45367"
+         style="font-style:normal;font-variant:normal;font-stretch:normal;font-size:10.58333302px;font-family:Raleway;-inkscape-font-specification:'Raleway, weight=251';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332"
+         id="tspan3817-2-3">Category A4.1.2</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 199.37071,47.083481 16.856485,99.960636"
+       id="path3915"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715"
+       inkscape:connection-end="#path3715-0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 199.93015,48.163679 135.92651,99.258421"
+       id="path3917"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715"
+       inkscape:connection-end="#path3715-0-8" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 204.22146,48.733718 36.64886,49.954649"
+       id="path3919"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715"
+       inkscape:connection-end="#path3715-0-6" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 205.32537,47.238449 356.79819,99.80566"
+       id="path3921"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715"
+       inkscape:connection-end="#path3715-0-6-2" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 11.363883,102.71852 -53.93435,152.22208"
+       id="path3923"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715-0"
+       inkscape:connection-end="#path3715-0-0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 16.111784,102.99202 51.517165,49.33455"
+       id="path3925"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715-0"
+       inkscape:connection-end="#path3715-0-8-3" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 357.1459,102.55731 -75.72805,50.20396"
+       id="path3927"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715-0-6-2"
+       inkscape:connection-end="#path3715-0-6-21" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 362.20964,102.75975 62.98135,49.42111"
+       id="path3929"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715-0-6-2"
+       inkscape:connection-end="#path3715-0-6-2-5" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 276.25282,156.28103 -78.8434,55.21368"
+       id="path3931"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="7"
+       inkscape:connection-start="#path3715-0-6-21"
+       inkscape:connection-end="#path3715-0-6-21-2" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 281.20033,156.50525 64.37476,54.38727"
+       id="path3933"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#path3715-0-6-21"
+       inkscape:connection-end="#path3715-0-6-2-5-7" />
+  </g>
+</svg>
