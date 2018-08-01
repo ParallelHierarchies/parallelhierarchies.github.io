@@ -53,6 +53,9 @@ header #links ul li {
 header #links ul li img {
   opacity: 0.5;
 }
+header #links ul li img:hover {
+  opacity: 1;
+}
 
 nav {
   position: fixed;
