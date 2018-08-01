@@ -8,7 +8,7 @@ body {
 
 section,
 header,
-nav,
+nav#topNavigation,
 footer {
   box-sizing: border-box;
   width: 50vw;
@@ -61,7 +61,12 @@ header #links ul li img:hover {
   opacity: 1;
 }
 
-nav {
+nav#topNavigation {
+  width: 100%;
+  max-width: none;
+  display: none;
+  visibility: visible;
+  position: fixed;
   top: 0;
   font-size: 1vw;
   background: #fff;
@@ -70,16 +75,18 @@ nav {
   vertical-align: center;
   box-shadow: 0 2px 4px #ccc;
 }
-nav #content {
+nav#topNavigation #content {
+  width: 50vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-nav.hidden {
+nav#topNavigation.hidden {
   visibility: hidden;
 }
-nav ul {
+nav#topNavigation ul {
   margin: 0;
   padding: 10px 20px;
   display: flex;
@@ -87,29 +94,69 @@ nav ul {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-nav img {
+nav#topNavigation img {
   flex-grow: 0;
   padding: 10px;
 }
-nav ul li {
+nav#topNavigation ul li {
   list-style: none;
 }
-nav ul li a {
+nav#topNavigation ul li a {
   color: #2196F3;
   text-decoration: none;
   padding: 10px;
   border-bottom: 3px solid transparent;
 }
-nav ul li a:hover {
+nav#topNavigation ul li a:hover {
   background: #fafafa;
   border-color: rgb(85, 168, 236);
 }
-nav ul li a.focus {
+nav#topNavigation ul li a.focus {
   border-color: #2196F3;
 }
 
+nav#sideNavigation {
+  position: fixed;
+  right: 0;
+  top: 75px;
+  font-size: 0.8vw;
+}
+nav#sideNavigation ul li {
+  list-style-position: outside;
+  margin-top: 10px;
+  max-width: 20vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+nav#sideNavigation ul li a {
+  color: #888;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  padding-left: 10px;
+}
+nav#sideNavigation > ul > li > ul {
+  height: 0;
+  overflow: hidden;
+}
+nav#sideNavigation > ul > li > a.focus + ul {
+  height: auto;
+}
+nav#sideNavigation > ul > li > a {
+  font-weight: bold;
+}
+nav#sideNavigation > ul > li > a.focus {
+  color: #2196F3;
+  border-color: #2196F3;
+}
+nav#sideNavigation ul > li > ul > li > a.focus {
+  color: #2196F3;
+}
+nav#sideNavigation ul > li > ul > li > a {
+  border: none;
+}
+
 section {
-  display: none;
+  /* display: none; */
   background: #fff;
   margin-bottom: 20px;
   box-shadow: 0 3px 3px #ccc;
@@ -117,7 +164,7 @@ section {
   color: #555;
 }
 section.focus {
-  display: block;
+  /* display: block; */
 }
 section h1 {
   font-weight: lighter;
@@ -223,7 +270,7 @@ img.icon {
 @media screen and (max-width: 1200px) {
   section,
   header,
-  nav,
+  nav#topNavigation,
   footer {
     width: 100%;
     min-width: 0;
@@ -246,14 +293,22 @@ img.icon {
     width: 35px;
   }
 
-  nav {
+  nav#topNavigation {
+    display: block;
     font-size: 3.5vw;
   }
-  nav ul {
+  nav#topNavigation ul {
     flex-grow: 10;
   }
-  nav ul li a:hover {
+  nav#topNavigation ul li a:hover {
     background: transparent;
+  }
+  nav#topNavigation #content {
+    width: 100%;
+  }
+
+  nav#sideNavigation {
+    display: none;
   }
 
   section {

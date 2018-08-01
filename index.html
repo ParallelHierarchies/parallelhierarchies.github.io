@@ -41,7 +41,7 @@
       </div>
     </header>
 
-    <nav class="">
+    <nav id="topNavigation">
       <div id="content">
         <ul>
           <li><a onclick="focusSection(event)" class='features focus' href="#features">Features</a></li>
@@ -53,20 +53,67 @@
       </div>
     </nav>
 
+    <nav id="sideNavigation">
+      <ul>
+        <li><a onclick="focusSection(event)" class='features focus' href="#features">Features</a>
+          <ul>
+            <li><a href="#quick_introduction">Quick Introduction</a></li>
+            <li><a href="#stable_release">Stable Release</a></li>
+            <li><a href="#experimental_features">Experimental Features</a></li>
+          </ul>
+        </li>
+        <li><a onclick="focusSection(event)" class='tutorial' href="#tutorial">Tutorial</a>
+          <ul>
+            <li><a href="#getting_started">Getting Started</a></li>
+            <li><a href="#view_components">The View Components</a></li>
+            <li><a href="#adding_removing_dimensions">Adding/Removing Dimensions</a></li>
+            <li><a href="#rearranging_dimensions">Category Interaction</a></li>
+            <li><a href="#drill_down_roll_up">Drilling down and Rolling up hierarchical categories</a></li>
+            <li><a href="#category_interaction">Category Interaction</a></li>
+            <li><a href="#in_depth_video">In-Depth Video Tutorial</a></li>
+          </ul>
+        </li>
+        <li><a onclick="focusSection(event)" class='dataimport' href="#dataimport">Use Your Own Data</a>
+          <ul>
+            <li><a href="#import_experimental">Import into experimental version</a></li>
+            <li><a href="#import_own_schema">Using your own schema</a></li>
+          </ul>
+        </li>
+        <li><a onclick="focusSection(event)" class='documentation' href="#documentation">Documentation</a>
+          <ul>
+            <li><a href="#dimension">Dimension</a></li>
+            <li><a href="#category">Category</a></li>
+            <li><a href="#ribbon">Ribbon</a></li>
+            <li><a href="#cursor_interaction">Cursor Interaction</a></li>
+            <li><a href="#ribbon_minimization">Ribbon minimization</a></li>
+            <li><a href="#column_chart">Column Chart</a></li>
+          </ul>
+        </li>
+        <li><a onclick="focusSection(event)" class='dataschema' href="#dataschema">Schema</a>
+          <ul>
+            <li><a href="#csv_files">CSV File</a></li>
+            <li><a href="#example_1">Example</a></li>
+            <li><a href="#json_file">JSON File</a></li>
+            <li><a href="#example2">Example</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
     <article>
       <section class="focus" id="features">
         <h1>Features</h1>
-        <h2>Quick Introduction</h2>
+        <h2 id="quick_introduction">Quick Introduction</h2>
         <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
           <iframe src="https://player.vimeo.com/video/279480161?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <script src="https://player.vimeo.com/api/player.js"></script>
 
-        <h2>Stable Release</h2>
+        <h2 id="stable_release">Stable Release</h2>
         <p>Includes all features as proposed in our paper and as listed above.</p>
         <p><a class="button" href="./demo/index.html">live demo</a></p>
 
-        <h2 style="margin-top: 35px">Experimental Features</h2>
+        <h2 id="experimental_features" style="margin-top: 35px">Experimental Features</h2>
         <p>Expanding the functionality of <i>Parallel Hierarchies</i> with new features like multiple hierarchy selection per dimenion, an accordion mode to change width of categories and more animations between interactions.</p>
         <p><strong>Note: </strong>Does not allow minimization of ribbon intersections (yet).</p>
 
@@ -75,14 +122,14 @@
 
       <section id="tutorial">
         <h1>Tutorial</h1>
-        <h2>Getting Started</h2>
+        <h2 id="getting_started">Getting Started</h2>
         <p>To follow this tutorial, you can either use <a href="./demo/index.html">the live demo</a>, or use a local version cloned from <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">our GitHub repository</a>.</p>
         <p>When launching the visualization, you will be presented with a list of datsasets to choose from. To follow this tutorial, click-on "Yeast Gene Ontology".</p>
         <img width=400 alt="screenshot of the dataset picker. You can see a list of three options: 'Yeast Gene Ontology', '1990 Census (sample of 10k)' and '199 Census (sample of 100k)'" src="./img/choose_dataset.PNG"/>
 
         <p>After selecting the dataset, the view will be generated from the data. A toolbar is positioned on top and the actual visualization below. You can interact with both the toolbar and the visualization, but we will come to that later on.</p>
 
-        <h2>The View Components</h2>
+        <h2 id="view_components">The View Components</h2>
         <p>Below you can see a screenshot from the visualization after selecting the Yeast Gene Ontology dataset. Let's have a look at the components of the visualization and how they are called:</p>
         <img alt="screenshot of the Parallel Hierarchies visualization. Bezier paths of various widths connect two disjoint groups of rectangles that are stacked on top of each other, each on one side of the screen. Above some widgets." src="./img/overview.PNG" />
 
@@ -99,7 +146,7 @@
           <li><a href="#ribbon">a ribbon between two neighboring dimensions</a></li>
         </ol>
 
-        <h2>Adding/Removing Dimensions</h2>
+        <h2 id="adding_removing_dimensions">Adding/Removing Dimensions</h2>
         <p>
           You can now investigate the dataset.
           The first thing you might want to do is adding a new dimension to the visualization.
@@ -123,7 +170,7 @@
           To do so, click the cross next to the name "Strand" in the header of the dimension.
         </p>
 
-        <h2>Rearranging Dimensions</h2>
+        <h2 id="rearranging_dimensions">Rearranging Dimensions</h2>
         <p>
           We now want to exlpore how the Locus chromosomes of the Locus dimension are interconnected to both Cellular Components and Biological Processes.
           In order to do this, we need to rearrange the dimensions and put the Locus dimension in between the other two.
@@ -133,7 +180,7 @@
           You can now explore the cross-tabulation between Locus to it's neighboring dimensions.
         </p>
 
-        <h2>Drilling down and Rolling up hierarchical categories</h2>
+        <h2 id="drill_down_roll_up">Drilling down and Rolling up hierarchical categories</h2>
         <p>
           You may have noticed the <i>+</i> symbols on some of the categories.
           These indicate hierarchies in the dataset.
@@ -161,7 +208,7 @@
           Notice how on every level, the number of visible Genes reduces, because categories which do not share any items active on all other dimensions have a height of 0.
         </p>
 
-        <h2>Category Interaction</h2>
+        <h2 id="category_interaction">Category Interaction</h2>
         <p>
           You will notice how some categories in the Locus dimension do not have a label.
           The reason for this is that <i>Parallel Hierarchies</i> tries to keep the view as clean as possible by hiding labels of categories that are smaller than the labels themselves.
@@ -181,7 +228,7 @@
           Try it out for yourself or watch our in-depth video below.
         </p>
 
-        <h2>In-Depth Video Tutorial</h2>
+        <h2 id="in_depth_video">In-Depth Video Tutorial</h2>
         <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
           <iframe src="https://player.vimeo.com/video/281947411?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
@@ -190,7 +237,7 @@
 
       <section id="dataimport">
         <h1>Use your own data</h1>
-        <h2>Import into experimental version</h2>
+        <h2 id="import_experimental">Import into experimental version</h2>
         <p>
           The quickest way to use your own data is to use the experimental version data import feature.
           First, visit the <a href="https://parallelhierarchies.github.io/demo/experimental.html">website</a> and click the "Use your own Dataset" option.
@@ -215,7 +262,7 @@
         </ol>
         <img src="./img/custom_dataset.PNG" />
 
-        <h2>Using your own schema</h2>
+        <h2 id="import_own_schema">Using your own schema</h2>
         <p>
           This assumes you have a CSV file with your items and a JSON file containting you schema in accordance with <a href="#datastructure_notice">the requirements</a> and a local clone of the github project ready to go.
         </p>
@@ -374,7 +421,7 @@
 
       <section id="dataschema">
         <h1 id="datastructure_notice">Data Schema</h1>
-        <h2>CSV file</h2>
+        <h2 id="csv_files">CSV file</h2>
         <p>Let's assume, you want to represent the following hierarchical dimension in <i>Parallel Hierarchies</i>:</p>
         <img src="./img/hierarchy_example.PNG"/>
         <p>This is an easy task to do in JSON, since we can place objects inside other objects, creating a tree structure. In CSV files on the other hand, we need to flatten the hierarchy.</p>
@@ -391,7 +438,7 @@
           We also need to make sure to store deeper levels as empty.
         </p>
 
-        <h3>Example</h3>
+        <h3 id="example1">Example</h3>
         <p>
           If an item in our data looked like this:
           <ul class='code'>
@@ -453,7 +500,7 @@
           <li>category A1,category A1.2,,40</li>
         </ul>
 
-        <h2>JSON file</h2>
+        <h2 id="json_file">JSON file</h2>
         <p>
           In addition to that we need to tell <i>Parallel Hierarchies</i> how the levels of our hierarchical dimensions are named, as well as some other metadata.
           We do this in a seperate JSON file with the following structure:
@@ -487,7 +534,7 @@
           <li>}</li>
         </ul>
 
-        <h3>Example</h3>
+        <h3 id="example2">Example</h3>
         <p>
           Following our example from the CSV file above, we would need to create a file looking like this:
         </p>
@@ -548,37 +595,49 @@
       var focusedSection = document.querySelector('#features');
 
       window.onload = function(event) {
-        focusedSection = document.querySelector(window.location.hash);
+        // focusedSection = document.querySelector(window.location.hash);
         // focusSection({ target: focusedSection, event });
       };
 
       var focusSection = function(event) {
-        document.querySelector('nav a.focus').classList.toggle('focus', false);
-        event.target.classList.toggle('focus', true);
+        // document.querySelector('nav a.focus').classList.toggle('focus', false);
+        // event.target.classList.toggle('focus', true);
 
-        var referencedSection = document.querySelector('#' + event.target.classList[0]);
-        event.preventDefault();
-        focusedSection.classList.toggle('focus', false);
-        focusedSection = referencedSection;
+        // var referencedSection = document.querySelector('#' + event.target.classList[0]);
+        // event.preventDefault();
+        // focusedSection.classList.toggle('focus', false);
+        // focusedSection = referencedSection;
 
-        focusedSection.classList.toggle('focus', true);
+        // focusedSection.classList.toggle('focus', true);
       }
 
       // FIXME: navigation bar updates focused section
-      // document.addEventListener('scroll', () => {
-      //   var navBar = document.querySelector('nav');
-      //   // navBar.classList.toggle('hidden', window.scrollY < 100);
+      document.addEventListener('scroll', () => {
+        var navBarTop = document.querySelector('nav#topNavigation');
+        navBarTop.classList.toggle('hidden', window.scrollY < 100);
 
-      //   var sections = document.querySelectorAll('section');
-      //   sections.forEach(function(section) {
-      //     var top = section.getBoundingClientRect().top;
-      //     var bottom = section.getBoundingClientRect().bottom;
-      //     var className = section.id.split('').splice(0).join('');
-      //     var navAnchor = document.querySelector('.' + className);
+        var sections = document.querySelectorAll('section');
+        sections.forEach(function(section) {
+          var top = section.getBoundingClientRect().top;
+          var bottom = section.getBoundingClientRect().bottom;
+          var className = section.id.split('').splice(0).join('');
+          var navAnchor = document.querySelectorAll('.' + className);
 
-      //     navAnchor.classList.toggle('focus', top < 150 && bottom > 150);
-      //   });
-      // });
+          navAnchor.forEach(a => a.classList.toggle('focus', top < 150 && bottom > 150));
+        });
+
+        var height = window.innerHeight;
+        var headlinesLevel2 = document.querySelectorAll('h2');
+        headlinesLevel2.forEach(function(headline) {
+          var top = headline.getBoundingClientRect().top;
+          var bottom = headline.getBoundingClientRect().bottom;
+          var id = headline.id;
+          var navAnchor = document.querySelector('a[href="#'+id+'"]');
+
+          navAnchor.classList.toggle('focus', top > 0 && bottom < height);
+        });
+
+      });
     </script>
   </body>
 </html>
