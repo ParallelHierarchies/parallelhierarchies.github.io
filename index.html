@@ -41,21 +41,20 @@
       </div>
     </header>
 
-    <nav class="hidden">
+    <nav class="">
       <div id="content">
-        <img src="logo.png" style="width: 20px; height: 20px"/>
         <ul>
-          <li><a class='features' href="#features">Features</a></li>
-          <li><a class='tutorial' href="#tutorial">Tutorial</a></li>
-          <li><a class='dataimport' href="#dataimport">Data Import</a></li>
-          <li><a class='documentation' href="#documentation">Documentation</a></li>
-          <li><a class='dataschema' href="#dataschema">Schema</a></li>
+          <li><a onclick="focusSection(event)" class='features focus' href="#features">Features</a></li>
+          <li><a onclick="focusSection(event)" class='tutorial' href="#tutorial">Tutorial</a></li>
+          <li><a onclick="focusSection(event)" class='dataimport' href="#dataimport">Data Import</a></li>
+          <li><a onclick="focusSection(event)" class='documentation' href="#documentation">Documentation</a></li>
+          <li><a onclick="focusSection(event)" class='dataschema' href="#dataschema">Schema</a></li>
         </ul>
       </div>
     </nav>
 
     <article>
-      <section id="features">
+      <section class="focus" id="features">
         <h1>Features</h1>
         <h2>Quick Introduction</h2>
         <div style="margin-top: 30px;padding:61.16% 0 0 0;position:relative;">
@@ -546,20 +545,35 @@
     </footer>
 
     <script>
-      document.addEventListener('scroll', () => {
-        var navBar = document.querySelector('nav');
-        navBar.classList.toggle('hidden', window.scrollY < 100);
+      var focusedSection = document.querySelector('#features');
 
-        var sections = document.querySelectorAll('section');
-        sections.forEach(function(section) {
-          var top = section.getBoundingClientRect().top;
-          var bottom = section.getBoundingClientRect().bottom;
-          var className = section.id.split('').splice(0).join('');
-          var navAnchor = document.querySelector('.' + className);
+      var focusSection = function(event) {
+        document.querySelector('nav a.focus').classList.toggle('focus', false);
+        event.target.classList.toggle('focus', true);
 
-          navAnchor.classList.toggle('focus', top < 150 && bottom > 150);
-        });
-      });
+        var referencedSection = document.querySelector('#' + event.target.classList[0]);
+        event.preventDefault();
+        focusedSection.classList.toggle('focus', false);
+        focusedSection = referencedSection;
+
+        focusedSection.classList.toggle('focus', true);
+      }
+
+      // FIXME: navigation bar updates focused section
+      // document.addEventListener('scroll', () => {
+      //   var navBar = document.querySelector('nav');
+      //   // navBar.classList.toggle('hidden', window.scrollY < 100);
+
+      //   var sections = document.querySelectorAll('section');
+      //   sections.forEach(function(section) {
+      //     var top = section.getBoundingClientRect().top;
+      //     var bottom = section.getBoundingClientRect().bottom;
+      //     var className = section.id.split('').splice(0).join('');
+      //     var navAnchor = document.querySelector('.' + className);
+
+      //     navAnchor.classList.toggle('focus', top < 150 && bottom > 150);
+      //   });
+      // });
     </script>
   </body>
 </html>
