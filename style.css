@@ -1,17 +1,28 @@
 body {
   font-family: Roboto, sans-serif;
   background: #efefef;
+  padding: 0;
+  margin: 0;
   padding-bottom: 20px;
 }
 
 section,
 header,
+nav,
 footer {
-  width: 800px;
+  box-sizing: border-box;
+  width: 50vw;
+  max-width: 1000px;
+  min-width: 800px;
   margin: 0 auto;
   padding: 20px 20px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 header h1 {
   color: #2196F3;
   text-transform: uppercase;
@@ -26,11 +37,69 @@ header p:first-of-type {
   margin-bottom: 20px;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+  max-width: none;
+  min-width: none;
+  top: 0;
+  font-size: 1rem;
+  padding: 0;
+  background: #fff;
+  z-index: 10;
+  vertical-align: center;
+  box-shadow: 0 2px 4px #ccc;
+}
+nav #content {
+  width: 50vw;
+  max-width: 1000px;
+  min-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav.hidden {
+  visibility: hidden;
+}
+nav ul {
+  width: 60%;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 10;
+  justify-content: space-evenly;
+}
+nav img {
+  flex-grow: 0;
+  padding: 10px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  color: #2196F3;
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 3px solid transparent;
+}
+nav ul li a:hover {
+  background: #fafafa;
+  border-color: rgb(85, 168, 236);
+}
+nav ul li a.focus {
+  border-color: #2196F3;
+}
+
 section {
   background: #fff;
   margin-bottom: 20px;
   box-shadow: 0 3px 3px #ccc;
   border: 1px solid #eee;
+  color: #555;
 }
 section h1 {
   font-weight: lighter;
@@ -47,18 +116,41 @@ section img {
   margin: 25px 0;
 }
 
+section p > code {
+  font-size: 14px;
+  padding: 2px 4px;
+  background: #f6f8fa;
+  border-radius: 3px;
+  line-height: 15px;
+}
+section ul.code {
+  font-family: monospace;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #f6f8fa;
+  border-radius: 2px;
+}
+section ul.code li {
+  list-style: none;
+  line-height: 15px;
+}
+
 footer {
   color: #000;
   opacity: 0.73;
+  display: flex;
+  justify-content: space-between;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
 }
 footer ul li {
-  display: inline-block;
   list-style: none;
 }
 footer a {
   color: #000;
   text-decoration: none;
-  margin-right: 20px;
 }
 footer a:hover {
   text-decoration: underline;
@@ -72,9 +164,6 @@ ul li {
 }
 li {
   margin-bottom: 2px;
-}
-code li {
-  list-style: none;
 }
 
 a {
@@ -111,4 +200,24 @@ img.icon {
   height: 15px;
   display: inline-block;
   font-style: normal;
+}
+
+@media screen and (max-width: 900px) {
+  section,
+  header,
+  nav,
+  footer {
+    width: 100%;
+    min-width: none;
+    margin: 0;
+  }
+
+  nav {
+    visibility: hidden;
+  }
+
+  section {
+    box-shadow: none;
+    margin: 0;
+  }
 }
