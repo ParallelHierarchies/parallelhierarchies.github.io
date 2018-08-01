@@ -220,7 +220,7 @@ img.icon {
   font-style: normal;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   section,
   header,
   nav,
