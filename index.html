@@ -10,34 +10,34 @@
   </head>
   <body>
     <header>
-      <div style="width:10%;">
+      <!-- <div style="width:10%;">
         <img src="logo.png" style="width:100%"/>
-      </div>
-      <div style="width: 80%;">
+      </div> -->
+      <div id='title'>
         <h1>Parallel Hierarchies</h1>
         <p>A visualization for cross-tabulating hierarchical aggregates</p>
-        <div id='links'>
-          <div>
-            <a class="button" href="./demo/index.html">live demo</a>
-          </div>
-          <ul>
-            <li>
-              <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">
-                <img alt="github logo" class="icon" src="./github-logo.png" />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fparallelhierarchies.github.io&amp;text=Check%20out%20Parallel%20Hierarchies%2C%20a%20visualization%20for%20cross-tabulating%20hierarchical%20aggregates." target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
-                <img alt="twitter logo" class="icon" src="./twitter-logo.png" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparallelhierarchies.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
-                <img alt="facebook logo" class="icon" src="./facebook-logo.png" />
-              </a>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div>
+        <a class="button" href="./demo/index.html">demo</a>
+      </div>
+      <div id='links'>
+        <ul>
+          <li>
+            <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">
+              <img alt="github logo" class="icon" src="./github-logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fparallelhierarchies.github.io&amp;text=Check%20out%20Parallel%20Hierarchies%2C%20a%20visualization%20for%20cross-tabulating%20hierarchical%20aggregates." target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
+              <img alt="twitter logo" class="icon" src="./twitter-logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparallelhierarchies.github.io%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+              <img alt="facebook logo" class="icon" src="./facebook-logo.png" />
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -546,6 +546,11 @@
 
     <script>
       var focusedSection = document.querySelector('#features');
+
+      window.onload = function(event) {
+        focusedSection = document.querySelector(window.location.hash);
+        // focusSection({ target: focusedSection, event });
+      };
 
       var focusSection = function(event) {
         document.querySelector('nav a.focus').classList.toggle('focus', false);
