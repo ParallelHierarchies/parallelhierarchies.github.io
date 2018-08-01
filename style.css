@@ -81,11 +81,10 @@ nav.hidden {
 }
 nav ul {
   margin: 0;
-  padding: 20px 20px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-grow: 10;
   justify-content: space-between;
 }
 nav img {
@@ -250,7 +249,9 @@ img.icon {
   nav {
     font-size: 3.5vw;
   }
-
+  nav ul {
+    flex-grow: 10;
+  }
   nav ul li a:hover {
     background: transparent;
   }
