@@ -50,7 +50,8 @@ header #links ul {
 header #links ul li {
   list-style: none;
 }
-header #links ul li img {
+header #links ul li img.icon {
+  width: 22px;
   opacity: 0.5;
 }
 header #links ul li img:hover {
