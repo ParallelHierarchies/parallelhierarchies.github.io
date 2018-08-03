@@ -322,7 +322,8 @@ img.small {
     box-shadow: none;
     margin: 0;
   }
-  section h1 {
+  section h1,
+  section h2 {
     font-weight: normal;
   }
   section li {
