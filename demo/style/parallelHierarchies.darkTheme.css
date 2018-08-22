@@ -26,9 +26,44 @@ body.dark g.category .category_label > text {
 }
 
 body.dark g.ribbon path.partial {
-  stroke: #fff;
+  fill: #fff;
+}
+body.dark g.ribbon path.main {
+  fill: #ccc;
+  fill-opacity: 0.5;
 }
 
 body.dark nav#uiControls > h1 {
   color: #fff;
+}
+
+body.dark nav#uiControls button,
+body.dark nav#uiControls .inputGroup,
+body.dark nav#uiControls select {
+  background: #333;
+  box-shadow: none;
+  color: #fff;
+}
+
+body.dark nav#uiControls button.circle {
+  background: #fff;
+  box-shadow: none;
+}
+
+body.dark nav#uiControls .inputGroup {
+  fill: #fff;
+}
+
+body.dark #aggregateValues {
+  background: #333;
+  color: #fff;
+}
+
+body.dark footer {
+  background: #333;
+  color: #fff;
+}
+
+body.dark #prototypeNotice {
+  color: #000;
 }

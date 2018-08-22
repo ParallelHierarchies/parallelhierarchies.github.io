@@ -16,39 +16,56 @@
   <body class="">
     <nav id="uiControls">
       <h1 id="title">Parallel Hierarchies</h1>
+      <div id="uiWidgets">
+        <select id="dimensionPicker" title="add another dimension to the visualization"></select>
 
-      <div class="inputGroup" id="percentageBars" style="opacity:1.0"></div>
+        <span class="inputGroup">
+          <input type="checkbox" id="uncertaintyModePicker" title="change the uncertainty mode" />
+          <label for="uncertaintyModePicker">
+            <i class="material-icons">settings_ethernet</i>show uncertainty</label>
+        </span>
 
-      <button class="circle" id="reset" style="color: firebrick" title="reset visualization to default values" ><i class="material-icons">cached</i></button>
-      <button class="circle" id="swapDataset" style="color:steelblue" title="change the dataset"><i class="material-icons">folder</i></button>
+        <select id="uncertaintyColorSchemePicker" title="change the uncertainty color scheme"></select>
+        <div id="rulers"></div>
+        <button id="addRuler" class="style" title="add a guiding line for vertical comparison tasks"><i class="material-icons">border_horizontal</i>Ruler</button>
 
-      <span class="inputGroup">
-        <input id="fisheyeRadio" type="radio" name="fisheyeRadio" value="fisheye" />
-        <label for="fisheyeRadio" title="use fisheye effect on categories"><i class="material-icons">search</i>Fisheye</label>
-        <input id="draggingRadio" type="radio" name="fisheyeRadio" value="drag" checked="true"/>
-        <label for="draggingRadio" title="use dragging interaction on categories"><i class="material-icons">pan_tool</i>Dragging</label>
-      </span>
+        <span class="inputGroup">
+          <input id="fisheyeRadio" type="radio" name="fisheyeRadio" value="fisheye" />
+          <label for="fisheyeRadio" title="use fisheye effect on categories"><i class="material-icons">search</i>Fisheye</label>
+          <input id="draggingRadio" type="radio" name="fisheyeRadio" value="drag" checked="true"/>
+          <label for="draggingRadio" title="use dragging interaction on categories"><i class="material-icons">pan_tool</i>Dragging</label>
+        </span>
 
-      <button id="addRuler" class="style" title="add a guiding line for vertical comparison tasks"><i class="material-icons">border_horizontal</i>Ruler</button>
-      <div id="rulers"></div>
+        <button class="circle" id="optimizeIntersections" style="color:teal" title="Randomly scramble the category positions to reduce the number of ribbon intersections."><i class="material-icons">shuffle</i></button>
+        <button class="circle" id="toggleDarkTheme" style="color:orange" title="Switch between a dark and light color scheme."><i class="material-icons">wb_sunny</i></button>
+        <button class="circle" id="swapDataset" style="color:steelblue" title="change the dataset"><i class="material-icons">folder</i></button>
+        <button class="circle" id="reset" style="color: firebrick" title="reset visualization to default values" ><i class="material-icons">cached</i></button>
 
-      <select id="dimensionPicker" title="add another dimension to the visualization"></select>
+        <div class="inputGroup" id="percentageBars" style="opacity:1.0"></div>
+      </div>
     </nav>
 
     <svg id="parallelHierarchies" style="margin-top: 50px"></svg>
 
     <div id="tooltip" class="hidden"></div>
 
-    <div id="datasetModal">
+    <footer>
+      <ul>
+        <li id="prototypeNotice" style="background:#F8BBD0;height:1em;border-radius:0.5em;padding:0.2em 0.5em;">Experimental Version</li>
+        <li id="foundBugNotice">Found a Bug? Psssst, no need to yell! In the meantime, create an issue on our
+          <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">
+            <img alt="github logo" class="icon" style="height:0.95em;opacity:0.73;margin:0 0.1em 0 0.25em;" src="./img/github-mark.png" />
+            GitHub Project
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+    <section id="datasetModal">
       <div class="modalBody">
         <div class="hide">✖</div>
         <h2>Pick a dataset</h2>
-        <ul>
-          <li><button class="preset" value="ontology"><i class="material-icons">folder_open</i>Yeast Gene Ontology</button></li>
-          <li><button class="preset" value="census10k"><i class="material-icons">folder_open</i>1990 Census (sample of 10k)</button></li>
-          <li><button class="preset" value="census100k"><i class="material-icons">folder_open</i>1990 Census (sample of 100k)</button></li>
-          <li><button id="toggleCustom"><i class="material-icons">build</i>Use your own Dataset</button></li>
-        </ul>
+        <ul id="presetDatasets"></ul>
 
         <div id="ownDataset" class="hidden">
           <h3>Custom Dataset (CSV)</h3>
@@ -73,19 +90,7 @@
           <p class="hidden" id="userSchemaError">Label must be set</p>
         </div>
       </div>
-    </div>
-
-    <footer class="hidden">
-      <ul>
-        <li id="prototypeNotice" style="background:#F8BBD0;height:1em;border-radius:0.5em;padding:0.2em 0.5em;">Experimental Version</li>
-        <li id="foundBugNotice">Found a Bug? Psssst, no need to yell! In the meantime, create an issue on our
-          <a href="https://github.com/ParallelHierarchies/ParallelHierarchies">
-            <img alt="github logo" class="icon" style="height:0.95em;opacity:0.73;margin:0 0.1em 0 0.25em;" src="../github-mark.png" />
-            GitHub Project
-          </a>
-        </li>
-      </ul>
-    </footer>
+    </section>
 
     <script type="text/javascript" src="./src/bundle.js"></script>
   </body>
