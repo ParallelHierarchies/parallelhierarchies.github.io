@@ -386,7 +386,7 @@ nav#uiControls #rulers > .ruler > div.delete::before {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 #aggregateValues .aggregateValue .option {
   width: 10px;
