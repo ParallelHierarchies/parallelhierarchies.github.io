@@ -159,14 +159,15 @@
         <ol type="a">
           <li>title of the dataset</li>
           <li>dropdown menu to add new dimensions</li>
-          <li>add a horizontal guideline for vertical height analysis</li>
-          <li><a href="#cursor_interaction">switch cursor interaction</a></li>
-          <li><a href="#ribbon_minimization">configure ribbon minimization</a></li>
-          <li>pick a dataset</li>
           <li>reset the visualization to default values</li>
+          <li>pick a dataset</li>
           <li><a href="#column_chart">Column chart</a></li>
           <li><a href="#dimension">a dimension</a></li>
           <li><a href="#ribbon">a ribbon between two neighboring dimensions</a></li>
+          <li>add a horizontal guideline for vertical height analysis</li>
+          <li><a href="#cursor_interaction">switch cursor interaction</a></li>
+          <li><a href="#ribbon_minimization">configure ribbon minimization</a></li>
+          <li><a href="#aggregate_dimension">choose aggregate value</a></li>
         </ol>
 
         <h2 id="adding_removing_dimensions">Adding/Removing Dimensions</h2>
@@ -423,6 +424,15 @@
           The grey bar on the very left shows how many items of the dataset are currently visible (or filtered, depending on the mode selected in the dropdown menu above).
           Each colored bar right to that one represents the queries per dimension.
           The order the bars is the same as the order of dimensions in the visualization.
+        </p>
+
+        <h2 id="aggregate_dimension">Choose Aggregate Value</h2>
+        <p><i>Pick the active aggregate dimension from the list configured in the schema file.</i></p>
+        <img src="./img/aggregate_dimension.PNG" alt="Screenshot of a widget giving two options for an aggregate value: 'Population' and 'Income'." />
+        <p>
+          <i>Parallel Hierarchies</i> uses an aggregate dimension containing a quantitative value to calculate the visual heights of categories and ribbons.
+          You can pick any aggregate dimension configured inside the schema file to your dataset. Switching between aggregate dimensions will
+          cause the visualization to recalculate the heights of ribbons and categories based on the selected dimension and the queries active at that point.
         </p>
       </section>
 
