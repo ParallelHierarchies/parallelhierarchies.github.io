@@ -1,4 +1,4 @@
-nav#uiControls {
+nav {
   width: 100%;
   width: -moz-available;
   width: -webkit-fill-available;
@@ -10,6 +10,47 @@ nav#uiControls {
   align-items: flex-start;
 }
 
+#uiControls {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  box-shadow: 0 -4px 4px #ccc;
+  padding: 1rem 2rem;
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+#uiControls.hidden {
+  display: block;
+  height: 0;
+  padding: 0;
+}
+.toggleBottomNav,
+#hideBottomNav {
+  font-size: 20px;
+  margin-left: 60px;
+  color: #333;
+  cursor: pointer;
+}
+.toggleBottomNav.hidden {
+  display: none;
+}
+#showBottomNav {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  z-index: 10;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  box-shadow: 0 2px 4px #ccc;
+  background: steelblue;
+  color: #fff;
+}
+
 #title {
   color: #525252;
   max-width: 30%;
@@ -18,57 +59,70 @@ nav#uiControls {
   flex-grow: 1;
 }
 #uiWidgets {
-  flex-grow: 10;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+#uiWidgets .widgetsRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
   justify-content: flex-end;
-  flex-wrap: wrap;
-  align-items: flex-start;
+}
+#uiWidgets .widgetsColumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-nav#uiControls button {
+nav button {
   box-shadow: 0 1px 3px #ccc;
 }
-nav#uiControls button:hover {
+nav button:hover {
   background-color: #eee;
   cursor: pointer;
   opacity: 1;
   box-shadow: 0 0px 1px #ccc;
 }
 
-nav#uiControls button,
-nav#uiControls .inputGroup,
-nav#uiControls select {
+nav button,
+nav .inputGroup,
+nav select {
   font-size: 1rem;
   float: right;
   background: #fff;
   color: #000;
   border: none;
-  padding: 0.2rem;
+  padding: 0.4rem;
   margin: 0 0 0 1rem;
   transition: box-shadow 0.2s;
   border-bottom: 2px solid #ccc;
-  font-size: 14px;
 }
-nav#uiControls input {
+nav input {
   display: none;
 }
-nav#uiControls input+label {
+nav input+label {
   color: #ccc;
   margin-right: 10px;
   cursor: pointer;
 }
-nav#uiControls i {
+nav i.material-icons {
   font-size: 15px;
 }
-nav#uiControls label > i,
-nav#uiControls button > i {
+nav label > i,
+nav button > i {
   margin-right: 10px;
+  font-size: 15px;
 }
-nav#uiControls button {
+nav button {
   border-radius: 2px;
 }
-nav#uiControls button.circle {
+nav button.circle {
   width: 30px;
   height: 30px;
   border-radius: 15px;
@@ -77,35 +131,36 @@ nav#uiControls button.circle {
   line-height: 30px;
   box-sizing: border-box;
 }
-nav#uiControls button.circle > i {
+nav button.circle > i {
   margin-right: 0;
+  font-size: 15px;
 }
-nav#uiControls input:checked+label {
+nav input:checked+label {
   font-weight: bold;
   color: steelblue;
 }
-nav#uiControls input:disabled+label {
+nav input:disabled+label {
   color: #ccc;
 }
-nav#uiControls button:hover,
-nav#uiControls .inputGroup:hover,
-nav#uiControls select:hover {
+nav button:hover,
+nav .inputGroup:hover,
+nav select:hover {
   border-color: steelblue;
 }
-nav#uiControls .inputGroup button {
+nav .inputGroup button {
   padding: 0rem 0.75rem;
 }
 
-nav#uiControls #dimensionPicker {
+nav #dimensionPicker {
   width: 200px;
 }
 
-nav#uiControls #rulers > .ruler {
+nav #rulers > .ruler {
   position: absolute;
   left: 20px;
   top: 10px;
 }
-nav#uiControls #rulers > .ruler > div.handle {
+nav #rulers > .ruler > div.handle {
   position: absolute;
   left: 20px;
   top: 2px;
@@ -115,12 +170,13 @@ nav#uiControls #rulers > .ruler > div.handle {
   border: 1px solid #555;
   border-radius: 50%;
 }
-nav#uiControls #rulers > .ruler > div.guideline {
+nav #rulers > .ruler > div.guideline {
   height: 0;
   border: none;
   border-bottom: 1px dotted #555;
+  margin-top: 12px;
 }
-nav#uiControls #rulers > .ruler > div.delete {
+nav #rulers > .ruler > div.delete {
   position: absolute;
   right: 0px;
   top: 35px;
@@ -135,7 +191,7 @@ nav#uiControls #rulers > .ruler > div.delete {
   transform: translateY(-28px);
   text-align: center;
 }
-nav#uiControls #rulers > .ruler > div.delete::before {
+nav #rulers > .ruler > div.delete::before {
   content: 'x';
 }
 
@@ -208,7 +264,7 @@ nav#uiControls #rulers > .ruler > div.delete::before {
   font-size: 14px;
   margin: 5px 0;
 }
-#ownDataset p.data_info {
+#ownDataset p.data_ {
   color: #888;
   font-size: 14px;
   margin: 10px 0 15px;
@@ -311,44 +367,54 @@ nav#uiControls #rulers > .ruler > div.delete::before {
 
 #notifications {
   position: absolute;
-  bottom: 3rem;
-  width: 100%;
+  bottom: 4.5rem;
+  right: 0;
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
 }
 #notifications .box {
-  border-radius: 2rem;
   padding: 0.4em 0 0.6em;
+  width: 100%;
   background: #fff;
-  border: 1px solid;
+  border: 1px solid transparent;
   text-align: center;
   font-weight: normal;
   justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+#notifications .box.hidden {
+  display: inline-flex;
+  visibility: hidden;
+  width: 0;
 }
 #notifications .box.error {
-  border-color: firebrick;
+  background: firebrick;
 }
 #notifications .box.warning {
-  border-color: orange;
+  background: orange;
 }
 #notifications .box.hint {
-  border-color: steelblue;
+  background: steelblue;
 }
 #notifications .box span {
   margin: 0 1em;
-}
-#notifications .box.error span {
-  color: firebrick;
-}
-#notifications .box.warning span {
-  color: orange;
-}
-#notifications .box.hint span {
-  color: steelblue;
+  color: #fff;
 }
 #notifications .icon::before {
   font-weight: bold;
-  content: 'info: ';
+}
+#notifications .info .icon::before {
+  content: 'Info: ';
+}
+#notifications .warning .icon::before {
+  content: 'Warning: ';
+}
+#notifications .error .icon::before {
+  content: 'Error: ';
 }
 #notifications .box span.delete::before {
   content: '✖';
@@ -356,15 +422,16 @@ nav#uiControls #rulers > .ruler > div.delete::before {
 }
 
 #aggregateValueSelection {
-  position: absolute;
-  bottom: 50px;
-  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   box-sizing: border-box;
 }
 #aggregateValues {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: flex-start;
   padding: 0;
   margin: 0;
   background: #fff;
@@ -377,16 +444,16 @@ nav#uiControls #rulers > .ruler > div.delete::before {
 }
 #aggregateValues .aggregateValue {
   list-style: none;
-  padding: 0.25rem 1rem;
   border-radius: 3px;
-  margin: 0 1rem;
+  margin: 0.25rem 1rem;
+  padding: 0;
   cursor: pointer;
 }
 #aggregateValues .aggregateValue .options {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 #aggregateValues .aggregateValue .option {
   width: 10px;
