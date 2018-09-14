@@ -1,10 +1,10 @@
 {
-  "title": "Test Datensatz",
-  "unit": "€",
+  "title": "Test Dataset",
+  "unit": "elements",
   "hierarchies": [
     {"label": "dimA", "levels": ["dimA1", "dimA2", "dimA3"] },
     {"label": "dimB", "levels": ["dimB1", "dimB2", "dimB3"] },
     {"label": "dimC", "levels": ["dimC1", "dimC2", "dimC3", "dimC4"] }
   ],
-  "timestamps": ["valueV1", "valueV2", "valueV3"]
+  "timestamps": ["version_1", "version_2", "version_3"]
 }

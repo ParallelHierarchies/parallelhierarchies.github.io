@@ -1,4 +1,4 @@
-﻿ID,valueV1,valueV2,valueV3,dimA1,dimA2,dimA3,dimB1,dimB2,dimC1,dimC2,dimC3,dimC4,uncertainty
+﻿ID,version_1,version_2,version_3,dimA1,dimA2,dimA3,dimB1,dimB2,dimC1,dimC2,dimC3,dimC4,uncertainty
 1,8,10,6,a,a,a,e,e,x,x,y,x,5
 2,9,4,1,a,a,b,e,e,y,x,y,x,2
 3,7,1,9,a,b,c,e,f,z,x,y,x,3
