@@ -1,5 +1,5 @@
 {
-	"title": "US Census Data (1990) Data Set",
+	"title": "1990 US Census (100k items)",
 	"unit": "individuals",
 	"hierarchies": [
 		{"label":"ANCESTRY 1","levels":["ANCSTRY10","ANCSTRY11","ANCSTRY12","ANCSTRY13"]},
