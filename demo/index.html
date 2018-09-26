@@ -19,13 +19,21 @@
 
       <div class="widgetRow">
 
-          <div class="inputGroup" id="percentageBars" style="opacity:1.0"></div>
-          <button class="circle" id="swapDataset" style="color:steelblue" title="change the dataset"><i class="material-icons">folder</i></button>
-          <button class="circle" id="SVGDownload" style="color:#333" title="Download the visualization as SVG"><i class="material-icons">save_alt</i></button>
-          <button class="circle" id="reset" style="color: firebrick" title="reset visualization to default values" ><i class="material-icons">cached</i></button>
-          <select id="dimensionPicker" title="add another dimension to the visualization"></select>
+        <div class="inputGroup" id="percentageBars" style="opacity:1.0"></div>
+        <button class="circle" id="swapDataset" style="color:steelblue" title="change the dataset">
+          <i class="material-icons">folder</i>
+        </button>
+        <button class="circle" id="PNGDownload" style="color:#555" title="Download the visualization as PNG">
+          <i class="material-icons">image</i>
+        </button>
+        <button class="circle" id="SVGDownload" style="color:#555" title="Download the visualization as SVG">
+          <i class="material-icons">code</i>
+        </button>
+        <button class="circle" id="reset" style="color: firebrick" title="reset visualization to default values" >
+          <i class="material-icons">cached</i>
+        </button>
+        <select id="dimensionPicker" title="add another dimension to the visualization"></select>
       </div>
-    </nav>
 
     <svg id="parallelHierarchies" style="margin-top: 50px"></svg>
 
