@@ -205,10 +205,14 @@ nav #rulers > .ruler > div.delete::before {
 #datasetModal > div.modalBody {
   width: 400px;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 175px;
   padding: 20px;
   background: #fff;
   border-radius: 2px;
+  transition: margin-top 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#datasetModal.centred > div.modalBody{
+  margin-top: 15px;
 }
 #datasetModal > div.modalBody > div.hide {
   float: right;
